@@ -541,7 +541,7 @@ object MediaPlayer {
         this::class.invokeVoid(this, "removePainter", Painter::class to painter)
     }
 
-    private val IdeGlassPaneImpl.paintersHelper: Any get() = this::class.invoke<Any>(this, "getNamedPainters", String::class to "idea.background.editor")!!
+    private val IdeGlassPaneImpl.paintersHelper: Any get() = this::class.invoke<Any>(this, "getNamedPainters\$intellij_platform_ide_impl", String::class to "idea.background.editor")!!
 
     private fun clearBackground() = PropertiesComponent.getInstance().setValue("idea.background.editor", null)
 
